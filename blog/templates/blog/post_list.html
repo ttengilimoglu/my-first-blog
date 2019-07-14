@@ -1,10 +1,44 @@
-<hr>
 
-{% for post in posts %}
-    <div>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-        <p>published: {{ post.published_date }}</p>
-        <hr>
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link href="//fonts.googleapis.com/css?family=DM+Serif+Text&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+	<title>Hello world!</title>
+
+</head>
+
+<body>
+
+<div class="page-header">
+    <h1><a href="/">Lorem ipsum dolor sit amet!</a></h1>
+</div>
+
+
+<div class="post">
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                    <div class="date">
+                        <p>Yayın tarihi: {{ post.published_date }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-{% endfor %}
+</div>
+</div>
+
+</body>
+</html>
