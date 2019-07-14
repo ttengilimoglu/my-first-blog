@@ -1,44 +1,47 @@
-
 {% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
 
+
+<link href="//fonts.googleapis.com/css?family=DM+Serif+Text&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-<link href="//fonts.googleapis.com/css?family=DM+Serif+Text&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 
-	<title>Hello world!</title>
-
+<title>Salve mundi!</title>
 </head>
 
 <body>
-
 <div class="page-header">
-    <h1><a href="/">Lorem ipsum dolor sit amet!</a></h1>
+<h1><a href="/">Lorem ipsum dolor sit amet!</a></h1>
 </div>
 
 
 <div class="post">
 <div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% for post in posts %}
-                <div class="post">
-                    <h1><a href="">{{ post.title }}</a></h1>
-                    <p>{{ post.text|linebreaksbr }}</p>
-                    <div class="date">
-                        <p>Yayın tarihi: {{ post.published_date }}</p>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+<div class="row">
+<div class="col-md-8">
+{% for post in posts %}
+<div class="post">
+<h1><a href="">{{ post.title }}</a></h1>
+<p>{{ post.text|linebreaksbr }}</p>
+<div class="date">
+<p>Yayın tarihi: {{ post.published_date }}</p>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
 </div>
 </div>
 
 </body>
 </html>
+
+<!--
+
+GitHub: https://github.com/ttengilimoglu/my-first-blog 
+
+-->
