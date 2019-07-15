@@ -10,12 +10,13 @@
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
 
-<title>Salve mundi!</title>
+<title>Tuğra Tengilimoğlu</title>
 </head>
 
 <body>
 <div class="page-header">
-<h1><a href="/">Lorem ipsum dolor sit amet!</a></h1>
+<h1><a href="/">Tuğra Tengilimoğlu</a></h1>
+<h4>My thoughts about Programming, Science, Tech and various other stuff</h4>
 </div>
 
 
@@ -28,7 +29,7 @@
 <h1><a href="">{{ post.title }}</a></h1>
 <p>{{ post.text|linebreaksbr }}</p>
 <div class="date">
-<p>Yayın tarihi: {{ post.published_date }}</p>
+<p>Publish date: {{ post.published_date }}</p>
 </div>
 </div>
 {% endfor %}
